@@ -1,0 +1,43 @@
+.deck {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 180px;
+  height: 220px;
+
+  overflow: hidden;
+
+  border: 2px solid #002140;
+  border-radius: 20px;
+
+  cursor: pointer;
+
+  &:hover {
+    .deck_plus-icon {
+      width: 500px;
+      height: 500px;
+
+      transition: 0.3s ease-in;
+    }
+  }
+
+  &_plus-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 32px;
+    height: 32px;
+
+    transition: 0.3s ease-in;
+
+    border: 2px solid #002140;
+    border-radius: 50%;
+
+    ::ng-deep svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}

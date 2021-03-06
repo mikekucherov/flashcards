@@ -19,8 +19,18 @@
     "@angular/platform-browser": "~10.2.0",
     "@angular/platform-browser-dynamic": "~10.2.0",
     "@angular/router": "~10.2.0",
+    "@datorama/akita": "^6.0.1",
+    "@ngxf/platform": "^9.0.1",
+    "@ngxf/socket.io": "^9.0.1",
+    "@types/socket.io-client": "^1.4.35",
+    "ng-zorro-antd": "^10.2.2",
+    "node-fetch": "^2.6.1",
+    "prettier": "^2.2.1",
     "rxjs": "~6.6.0",
+    "socket.io-client": "^3.1.2",
     "tslib": "^2.0.0",
+    "unsplash-js": "^7.0.4",
+    "whatwg-fetch": "^3.6.2",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {

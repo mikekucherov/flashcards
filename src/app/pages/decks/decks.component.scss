@@ -1,0 +1,15 @@
+.decks {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  padding: 48px;
+
+  &_card {
+    margin-left: 16px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

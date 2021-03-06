@@ -1,0 +1,6 @@
+<div class="deck-creation">
+  <app-card
+    [imageList]="imageList$ | async"
+    (titleChange)="updateSearchQuery($event)"
+  ></app-card>
+</div>

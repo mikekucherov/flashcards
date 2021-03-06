@@ -1,0 +1,8 @@
+<div (click)="cardClick.emit()" class="deck">
+  <p *ngIf="!isCreateButton">Deck</p>
+  <div *ngIf="isCreateButton">
+    <div class="deck_plus-icon">
+      <i nz-icon nzType="plus" nzTheme="outline"></i>
+    </div>
+  </div>
+</div>

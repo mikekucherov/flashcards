@@ -1,0 +1,18 @@
+<div class="card">
+  <div *ngIf="imageList?.length" class="card__image-list">
+    <nz-carousel #carouselComponent [nzEffect]="'fade'" [nzDotPosition]="'left'">
+      <div nz-carousel-content *ngFor="let image of imageList">
+        <div class="card__image-list_item"
+             [ngStyle]="{ backgroundImage: 'url(' + image + ')' }"
+        ></div>
+      </div>
+    </nz-carousel>
+  </div>
+  <input
+    class="card_input"
+    [class.card_input--white]="imageList?.length"
+    [placeholder]="'Card name'"
+    [(ngModel)]="title"
+    (ngModelChange)="updateTitle($event)"
+  >
+</div>

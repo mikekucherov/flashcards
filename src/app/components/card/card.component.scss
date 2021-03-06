@@ -1,0 +1,59 @@
+.card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 50vh;
+  height: 65vh;
+
+  border: 2px solid black;
+  border-radius: 50px;
+
+  &_input {
+    width: calc(100% - 120px);
+
+    font-size: 60px;
+
+    text-align: center;
+
+    border: none;
+
+    background-color: transparent;
+
+    &:focus {
+      outline: none;
+    }
+
+    &--white {
+      z-index: 10;
+
+      color: white !important;
+    }
+  }
+
+  &__image-list {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+
+    z-index: 9;
+
+    width: calc(100% - 120px);
+    height: calc(100% - 120px);
+
+    [nz-carousel-content] {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    &_item {
+      width: 100%;
+      height: calc(65vh - 124px);
+
+      background-size: cover;
+
+      border-radius: 50px;
+    }
+  }
+}
