@@ -22,7 +22,8 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => antDesign
   imports: [
     CommonModule,
     NzIconModule,
-    FormsModule
+    FormsModule,
+    NzCarouselModule
   ],
   providers: [ { provide: NZ_ICONS, useValue: icons } ]
 

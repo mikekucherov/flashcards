@@ -1,24 +1,79 @@
 .deck {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  &__top-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  width: 180px;
-  height: 220px;
+    width: 180px;
+    height: 220px;
 
-  overflow: hidden;
+    background-color: white;
 
-  border: 2px solid #002140;
-  border-radius: 20px;
+    border: 2px solid #002140;
+    border-radius: 20px;
 
-  cursor: pointer;
+    cursor: pointer;
 
-  &:hover {
-    .deck_plus-icon {
-      width: 500px;
-      height: 500px;
+    &:hover {
+      .deck__top-card_bg--1,
+      .deck__top-card_bg--2 {
+        top: 0;
+        left: 0;
+        z-index: -1;
 
-      transition: 0.3s ease-in;
+        width: 170px;
+        height: 210px;
+
+        transition: 0.3s;
+      }
+    }
+
+    &--new {
+      overflow: hidden;
+
+      &:hover {
+        .deck_plus-icon {
+          width: 500px;
+          height: 500px;
+
+          transition: 0.3s ease-in;
+        }
+      }
+    }
+
+    &_bg {
+      position: absolute;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 180px;
+      height: 220px;
+
+      transition: 0.3s;
+
+      overflow: hidden;
+
+      background-color: white;
+
+      border: 2px solid #002140;
+      border-radius: 20px;
+
+      &--1 {
+        top: 3px;
+        left: 3px;
+
+        z-index: -2;
+      }
+
+      &--2 {
+        top: 8px;
+        left: 8px;
+
+        z-index: -3;
+      }
     }
   }
 

@@ -17,6 +17,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/deck-creation/deck-creation.module').then((m) => m.DeckCreationModule),
   },
+  {
+    path: 'list/:deckId',
+    loadChildren: () =>
+      import('./pages/cards-list/cards-list.module').then((m) => m.CardsListModule),
+  },
 ];
 
 @NgModule({

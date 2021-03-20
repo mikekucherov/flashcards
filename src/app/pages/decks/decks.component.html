@@ -1,6 +1,7 @@
 <div class="decks">
-  <app-deck class="decks_card"></app-deck>
-  <app-deck class="decks_card"></app-deck>
+  <app-deck *ngFor="let deck of decks" [deckInfo]="deck" class="decks_card"
+            (cardClick)="openDeck(deck.id)"
+  ></app-deck>
   <app-deck class="decks_card" [isCreateButton]="true"
             (cardClick)="goToCreation()"
   ></app-deck>

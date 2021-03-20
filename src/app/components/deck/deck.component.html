@@ -1,8 +1,17 @@
 <div (click)="cardClick.emit()" class="deck">
-  <p *ngIf="!isCreateButton">Deck</p>
-  <div *ngIf="isCreateButton">
-    <div class="deck_plus-icon">
-      <i nz-icon nzType="plus" nzTheme="outline"></i>
+  <div class="deck__top-card"
+       [class.deck__top-card--new]="isCreateButton"
+  >
+    <p *ngIf="!isCreateButton"
+       (click)="cardClick.emit(deckInfo?.id)"
+    >{{ deckInfo?.title }}</p>
+    <div *ngIf="isCreateButton">
+      <div class="deck_plus-icon">
+        <i nz-icon nzType="plus" nzTheme="outline"></i>
+      </div>
     </div>
+
+    <div *ngIf="!isCreateButton" class="deck__top-card_bg deck__top-card_bg--1"></div>
+    <div *ngIf="!isCreateButton" class="deck__top-card_bg deck__top-card_bg--2"></div>
   </div>
 </div>

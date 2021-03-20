@@ -7,6 +7,7 @@ import {Component, Input, OnInit, EventEmitter, Output} from '@angular/core';
 })
 export class DeckComponent implements OnInit {
 
+  @Input() deckInfo;
   @Input() isCreateButton = false;
 
   @Output() cardClick = new EventEmitter();

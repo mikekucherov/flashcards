@@ -12,7 +12,7 @@ export class CardComponent implements OnInit {
 
   @Output() titleChange = new EventEmitter();
 
-  @ViewChild('carouselComponent') carouselComponentEl;
+  @ViewChild('carouselComponent') carouselComponentEl: any;
 
   constructor() { }
 
@@ -25,7 +25,7 @@ export class CardComponent implements OnInit {
 
   @HostListener('document:keydown', ['$event'])
   onKeyboardEvent(evt: KeyboardEvent) {
-    console.log(evt.code);
+
     switch (evt.code) {
       case 'ArrowUp':
         this.carouselComponentEl.pre();
